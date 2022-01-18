@@ -6,3 +6,45 @@
     border-radius: 50%;
     width: 100%;
 }
+
+.ms_contact-list-border {
+    border-top: 1px solid #e9ebea;
+}
+
+.ms_searchbar-bg {
+    background-color: #fafafa;
+}
+
+.ms_searchbar-style-overwrite {
+    background-color: #fff;
+    color: #d5d6d8;
+}
+
+.ms_searchbar-no-border {
+    border-left: none;
+}
+
+.ms_notification-bg {
+    background-color: #8edafc;
+}
+
+.ms_notification-icon {
+    background-color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 10px 12px;
+    color: #8edafc;
+}
+
+.ms_icon-style {
+    color: #b1b1b1;
+    font-size: 20px;
+}
+
+.ms_lightgray-bg {
+    background-color: #eaeaea;
+}
+
+.ms_container-height {
+    height: 100vh;
+}

@@ -15,7 +15,8 @@
 
     <div id="app">
 
-        <div class="container">
+        <div class="container py-4 ms_container-height">
+
             <div class="row">
 
                 <!-- Sidebar on the left -->
@@ -23,17 +24,42 @@
                     
                     <!-- User name -->
                     <div class="row">
-                        <div class="col"></div>
+                        <div class="col d-flex justify-content-between py-3 ms_lightgray-bg">
+                            <div class="d-flex align-items-center">
+                                <div class="ms_avatar-picture">
+                                    <img src="img/avatar_io.jpg" class="ms_avatar-img">
+                                </div>
+                                <div class="fw-bold">Nome Utente</div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-circle-notch px-2 ms_icon-style"></i>
+                                <i class="fas fa-comment-alt px-2 ms_icon-style"></i>
+                                <i class="fas fa-ellipsis-v px-2 ms_icon-style"></i>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Notifications -->
                     <div class="row">
-                        <div class="col"></div>
+                        <div class="col ms_notification-bg d-flex py-3">
+                            <div>
+                                <div class="ms_notification-icon"><i class="fas fa-bell-slash"></i></div>
+                            </div>
+                            <div class="px-2">
+                                <div class="fw-bold">Ricevi notifiche di nuovi messaggi</div>
+                                <div><u class="text-muted">Attiva notifiche desktop</u></div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Search -->
                     <div class="row">
-                        <div class="col"></div>
+                        <div class="col ms_searchbar-bg">
+                            <div class="input-group my-1">
+                                <span class="input-group-text ms_searchbar-style-overwrite px-3"><i class="fas fa-search"></i></span>
+                                <input type="text" class="form-control ms_searchbar-no-border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+                        </div>
                     </div>
 
                     <!-- Contact list -->
@@ -41,7 +67,7 @@
                         <div class="col">
                             <div v-for="(item, i) in contacts">
                                 <div class="row">
-                                    <div class="col d-flex py-2">
+                                    <div class="col d-flex py-2 ms_contact-list-border">
                                         <div class="ms_avatar-picture">
                                             <img 
                                             :src="['img/avatar' + contacts[i].avatar + '.jpg']"
@@ -60,8 +86,9 @@
                 <div class="col">
                     
                 </div>
-                
+
             </div>
+
         </div>
 
     </div>
