@@ -104,12 +104,4 @@ new Vue ({
 
     },
 
-    methods: {
-
-        chatIndex: function (index) {
-            currentIndex = index;
-        }
-
-    },
-
 });
