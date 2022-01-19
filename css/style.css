@@ -48,3 +48,47 @@
 .ms_container-height {
     height: 100vh;
 }
+
+.ms_border-left {
+    border-left: 1px solid #cabbbb;
+}
+
+.ms_textarea-icon-size {
+    width: 5%;
+}
+
+.ms_textarea-size {
+    width: 90%;
+    vertical-align: middle;
+}
+
+.ms_textarea-container {
+    height: 82px;
+    line-height: 82px;
+}
+
+.ms_chat {
+    height: 650px;
+    background-image: url("../img/mine.jpg");
+}
+
+.ms_chatbox {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.ms_chat-date {
+    font-size: 10px;
+}
+
+.ms_received {
+    background-color: #fff;
+}
+
+.ms_sent-position {
+    justify-content: flex-end;
+}
+
+.ms_sent {
+    background-color: #d5f9ba;
+}

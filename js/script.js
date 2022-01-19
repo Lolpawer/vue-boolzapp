@@ -92,6 +92,24 @@ new Vue ({
             },
         ],
 
+        classList: [ {
+
+            messageSent: 'ms_sent',
+            
+            messageReceived: 'ms_received',
+
+        } ],
+
+       currentIndex: 0,
+
+    },
+
+    methods: {
+
+        chatIndex: function (index) {
+            currentIndex = index;
+        }
+
     },
 
 });

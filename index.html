@@ -67,7 +67,7 @@
                         <div class="col">
                             <div v-for="(item, i) in contacts">
                                 <div class="row">
-                                    <div class="col d-flex py-2 ms_contact-list-border">
+                                    <div class="col d-flex py-2 ms_contact-list-border" @click="currentIndex = i">
                                         <div class="ms_avatar-picture">
                                             <img 
                                             :src="['img/avatar' + contacts[i].avatar + '.jpg']"
@@ -85,6 +85,55 @@
                 <!-- Main -->
                 <div class="col">
                     
+                    <!-- Contact user name -->
+                    <div class="row">
+                        <div class="col d-flex justify-content-between py-3 ms_lightgray-bg ms_border-left">
+                            <div class="d-flex align-items-center">
+                                <div class="ms_avatar-picture">
+                                    <img 
+                                    :src="['img/avatar' + contacts[currentIndex].avatar + '.jpg']"
+                                    class="ms_avatar-img">
+                                </div>
+                                <div class="ps-3">
+                                    <div class="fw-bold">{{contacts[currentIndex].name}}</div>
+                                    <div class="text-muted">Ultimo accesso oggi alle</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-search px-2 ms_icon-style"></i>
+                                <i class="fas fa-paperclip px-2 ms_icon-style"></i>
+                                <i class="fas fa-ellipsis-v px-2 ms_icon-style"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat -->
+                    <div class="row">
+                        <div class="col ms_chat p-5">
+                            <div class="row d-flex" v-for="(message, i) in contacts[currentIndex].messages" :class="contacts[currentIndex].messages[i].status === 'sent' ? 'ms_sent-position': ''">
+                                <div class="ms_chatbox my-1"  :class="contacts[currentIndex].messages[i].status === 'sent' ? 'ms_sent': 'ms_received'">
+                                    <div class="pt-2 px-3">{{contacts[currentIndex].messages[i].text}}</div>
+                                    <div class="ms_chat-date text-muted text-end pe-1">{{contacts[currentIndex].messages[i].date}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text area -->
+                    <div class="row">
+                        <div class="col ms_lightgray-bg d-flex ms_textarea-container">
+                            <div class="ms_textarea-icon-size px-3">
+                                <i class="far fa-smile ms_icon-style"></i>
+                            </div>
+                            <div class="ms_textarea-size p-3">
+                                <input type="text" class="form-control py-3" placeholder="Scrivi un messaggio">
+                            </div>
+                            <div class="ms_textarea-icon-size px-3">
+                                <i class="fas fa-microphone ms_icon-style"></i>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
