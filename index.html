@@ -58,7 +58,11 @@
                         <div class="col ms_searchbar-bg">
                             <div class="input-group my-1">
                                 <span class="input-group-text ms_searchbar-style-overwrite px-3"><i class="fas fa-search"></i></span>
-                                <input type="text" class="form-control ms_searchbar-no-border" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" 
+                                class="form-control ms_searchbar-no-border" 
+                                placeholder="Cerca o inizia una nuova chat" 
+                                aria-label="Username" aria-describedby="basic-addon1"
+                                v-model="searchInput">
                               </div>
                         </div>
                     </div>
@@ -68,7 +72,9 @@
                         <div class="col">
                             <div v-for="(item, i) in contacts">
                                 <div class="row">
-                                    <div class="col d-flex py-2 ms_contact-list-border ms_cursor-pointer" @click="currentIndex = i">
+                                    <div class="col d-flex py-2 ms_contact-list-border ms_cursor-pointer" 
+                                    @click="currentIndex = i"
+                                    v-if="item.name.toLowerCase().includes(searchInput)">
                                         <div class="ms_avatar-picture">
                                             <img 
                                             :src="['img/avatar' + contacts[i].avatar + '.jpg']"

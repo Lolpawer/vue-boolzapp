@@ -104,6 +104,8 @@ new Vue ({
 
        temporaryMessage: '',
 
+       searchInput: '',
+
     },
 
     methods: {
