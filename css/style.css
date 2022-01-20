@@ -70,6 +70,7 @@
 .ms_chat {
     height: 650px;
     background-image: url("../img/mine.jpg");
+    overflow-y: scroll;
 }
 
 .ms_chatbox {
@@ -91,4 +92,8 @@
 
 .ms_sent {
     background-color: #d5f9ba;
+}
+
+.ms_cursor-pointer {
+    cursor: pointer;
 }

@@ -102,6 +102,36 @@ new Vue ({
 
        currentIndex: 0,
 
+       temporaryMessage: '',
+
+    },
+
+    methods: {
+
+        sendTextTo: function (contact) {
+           contact.messages.push({
+                date: this.getTime(),
+                text: this.temporaryMessage,
+                status: 'sent'
+           });
+           this.temporaryMessage = '';
+           setTimeout(() => {
+                this.contactReply(contact)
+           }, 1000);
+        },
+
+        contactReply: function (contact) {
+            contact.messages.push({
+                date: this.getTime(),
+                text: 'OK',
+                status: 'received'
+            })
+        },
+
+        getTime: function() {
+            return dayjs().format('DD/MM/YYYY HH:mm:ss');
+        },
+
     },
 
 });
