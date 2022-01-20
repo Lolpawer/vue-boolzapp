@@ -45,8 +45,8 @@
     background-color: #eaeaea;
 }
 
-.ms_container-height {
-    height: 100vh;
+.ms_white-bg {
+    background-color: #fff;
 }
 
 .ms_border-left {
@@ -96,4 +96,9 @@
 
 .ms_cursor-pointer {
     cursor: pointer;
+}
+
+#app {
+    background: linear-gradient(#009587 20%, #d9dbd5 20%);
+    height: 100vh;
 }

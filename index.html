@@ -21,7 +21,7 @@
             <div class="row">
 
                 <!-- Sidebar on the left -->
-                <div class="col-4">
+                <div class="col-4 ms_white-bg">
                     
                     <!-- User name -->
                     <div class="row">
@@ -74,7 +74,7 @@
                                 <div class="row">
                                     <div class="col d-flex py-2 ms_contact-list-border ms_cursor-pointer" 
                                     @click="currentIndex = i"
-                                    v-if="item.name.toLowerCase().includes(searchInput)">
+                                    v-if="item.name.toLowerCase().includes(searchInput.toLowerCase())">
                                         <div class="ms_avatar-picture">
                                             <img 
                                             :src="['img/avatar' + contacts[i].avatar + '.jpg']"
